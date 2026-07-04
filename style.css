@@ -1,0 +1,1785 @@
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#090811;
+
+    color:white;
+
+    overflow:hidden;
+
+    width:100vw;
+    height:100vh;
+
+}
+
+/* ==========================================
+   ROOT
+========================================== */
+
+:root{
+
+    --bg:#090811;
+
+    --pink:#ff5fa2;
+
+    --purple:#8d5cff;
+
+    --glass:rgba(255,255,255,.08);
+
+    --border:rgba(255,255,255,.15);
+
+    --shadow:0 25px 60px rgba(0,0,0,.45);
+
+    --radius:32px;
+
+}
+
+/* ==========================================
+   BACKGROUND
+========================================== */
+
+#background{
+
+    position:fixed;
+
+    inset:0;
+
+    overflow:hidden;
+
+    z-index:-100;
+
+}
+
+/* ==========================================
+   SCREENS
+========================================== */
+
+.screen{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:1s;
+
+}
+
+.screen.active{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+/* ==========================================
+   GLASS CARD
+========================================== */
+
+.glassCard{
+
+    width:min(600px,90%);
+
+    padding:55px;
+
+    border-radius:var(--radius);
+
+    background:var(--glass);
+
+    backdrop-filter:blur(30px);
+
+    border:1px solid var(--border);
+
+    box-shadow:var(--shadow);
+
+    text-align:center;
+
+    animation:floatCard 5s ease-in-out infinite;
+
+}
+
+@keyframes floatCard{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.glassCard h1{
+
+    font-size:55px;
+
+    font-weight:700;
+
+    margin-bottom:25px;
+
+}
+
+.glassCard h2{
+
+    font-size:36px;
+
+    margin-bottom:15px;
+
+}
+
+.glassCard p{
+
+    line-height:1.8;
+
+    opacity:.8;
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+button{
+
+    margin-top:35px;
+
+    padding:18px 42px;
+
+    border:none;
+
+    border-radius:100px;
+
+    cursor:pointer;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    background:linear-gradient(135deg,var(--pink),var(--purple));
+
+    color:white;
+
+    transition:.35s;
+
+    box-shadow:0 15px 40px rgba(255,95,162,.4);
+
+}
+
+button:hover{
+
+    transform:translateY(-5px) scale(1.05);
+
+    box-shadow:0 25px 60px rgba(255,95,162,.6);
+
+}
+
+button:active{
+
+    transform:scale(.96);
+
+}
+
+/* ==========================================
+   INPUT
+========================================== */
+
+input{
+
+    width:100%;
+
+    margin-top:30px;
+
+    padding:18px;
+
+    border-radius:18px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    background:rgba(255,255,255,.05);
+
+    color:white;
+
+    font-size:18px;
+
+    outline:none;
+
+    transition:.3s;
+
+}
+
+input:focus{
+
+    border-color:var(--pink);
+
+    box-shadow:0 0 25px rgba(255,95,162,.5);
+
+}
+
+/* ==========================================
+   END CARD
+========================================== */
+
+.endingCard{
+
+    max-width:700px;
+
+}
+
+.endingCard h2{
+
+    margin-top:30px;
+
+    color:#ffb7d6;
+
+}
+
+/* ==========================================
+   PHOTO WALL
+========================================== */
+
+#photoWall{
+
+    position:absolute;
+
+    inset:0;
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:18px;
+
+    padding:18px;
+
+    overflow:hidden;
+
+}
+
+/* ==========================================
+   PHOTO COLUMN
+========================================== */
+
+.photoColumn{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.columnUp{
+
+    animation:moveUp 35s linear infinite;
+
+}
+
+.columnDown{
+
+    animation:moveDown 35s linear infinite;
+
+}
+
+/* ==========================================
+   PHOTO CARD
+========================================== */
+
+.photo{
+
+    width:100%;
+
+    height:30vh;
+
+    border-radius:28px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    background:#222;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.35);
+
+    animation:photoFloat 5s ease-in-out infinite;
+
+}
+
+.photo img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transition:1s;
+
+}
+
+.photo:hover img{
+
+    transform:scale(1.08);
+
+}
+
+/* ==========================================
+   PHOTO GLOW
+========================================== */
+
+.photo::after{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        transparent,
+        rgba(255,255,255,.03)
+    );
+
+}
+
+/* ==========================================
+   PHOTO FLOAT
+========================================== */
+
+@keyframes photoFloat{
+
+    0%{
+
+        transform:translateY(0) scale(.98);
+
+    }
+
+    50%{
+
+        transform:translateY(-6px) scale(1);
+
+    }
+
+    100%{
+
+        transform:translateY(0) scale(.98);
+
+    }
+
+}
+
+/* ==========================================
+   COLUMN ANIMATION
+========================================== */
+
+@keyframes moveUp{
+
+    from{
+
+        transform:translateY(0);
+
+    }
+
+    to{
+
+        transform:translateY(-50%);
+
+    }
+
+}
+
+@keyframes moveDown{
+
+    from{
+
+        transform:translateY(-50%);
+
+    }
+
+    to{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ==========================================
+   VIGNETTE
+========================================== */
+
+#vignette{
+
+    position:absolute;
+
+    inset:0;
+
+    pointer-events:none;
+
+    background:
+
+    radial-gradient(
+
+        circle,
+
+        transparent 35%,
+
+        rgba(0,0,0,.55) 100%
+
+    );
+
+}
+
+/* ==========================================
+   LANDING TEXT
+========================================== */
+
+#landing{
+
+    z-index:50;
+
+}
+
+#landing h1{
+
+    font-size:60px;
+
+    margin-bottom:20px;
+
+    text-shadow:
+
+    0 0 20px rgba(255,255,255,.4);
+
+}
+
+#landing button{
+
+    font-size:20px;
+
+}
+
+/* ==========================================
+   BLUR EFFECT
+========================================== */
+
+.blurBackground #photoWall{
+
+    filter:blur(12px);
+
+    transform:scale(1.08);
+
+    transition:2s;
+
+}
+
+/* ==========================================
+   SLOW EFFECT
+========================================== */
+
+.slowColumn{
+
+    animation-duration:120s !important;
+
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media(max-width:900px){
+
+#photoWall{
+
+grid-template-columns:1fr;
+
+padding:12px;
+
+}
+
+.photo{
+
+height:220px;
+
+}
+
+.glassCard{
+
+padding:35px;
+
+}
+
+.glassCard h1{
+
+font-size:36px;
+
+}
+
+button{
+
+font-size:16px;
+
+padding:15px 32px;
+
+}
+
+}
+
+/* =========================================================
+                FAIRY PARTICLES
+========================================================= */
+
+#particles{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+.particle{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:white;
+
+    opacity:.45;
+
+    filter:blur(2px);
+
+    animation:particleFloat linear infinite;
+
+}
+
+@keyframes particleFloat{
+
+    0%{
+
+        transform:
+
+        translateY(120vh)
+
+        scale(.3);
+
+        opacity:0;
+
+    }
+
+    10%{
+
+        opacity:.6;
+
+    }
+
+    50%{
+
+        opacity:.9;
+
+    }
+
+    100%{
+
+        transform:
+
+        translateY(-20vh)
+
+        translateX(60px)
+
+        scale(1.4);
+
+        opacity:0;
+
+    }
+
+}
+
+
+/* =========================================================
+                    STARS
+========================================================= */
+
+#stars{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    pointer-events:none;
+
+}
+
+.star{
+
+    position:absolute;
+
+    background:white;
+
+    border-radius:50%;
+
+    opacity:.2;
+
+    box-shadow:
+
+    0 0 10px white,
+
+    0 0 20px white,
+
+    0 0 35px white;
+
+    animation:twinkle infinite ease-in-out;
+
+}
+
+@keyframes twinkle{
+
+    0%{
+
+        opacity:.15;
+
+        transform:scale(.5);
+
+    }
+
+    50%{
+
+        opacity:1;
+
+        transform:scale(1.5);
+
+    }
+
+    100%{
+
+        opacity:.15;
+
+        transform:scale(.5);
+
+    }
+
+}
+
+
+/* =========================================================
+              OVERLAY MESSAGE
+========================================================= */
+
+.overlayMessage{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.45);
+
+    backdrop-filter:blur(12px);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transition:.5s;
+
+    z-index:99999;
+
+}
+
+.overlayMessage.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+}
+
+.overlayCard{
+
+    padding:45px 70px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(35px);
+
+    border:1px solid rgba(255,255,255,.12);
+
+    text-align:center;
+
+    box-shadow:
+
+    0 30px 80px rgba(0,0,0,.5);
+
+}
+
+.overlayCard h1{
+
+    font-size:52px;
+
+    margin-bottom:15px;
+
+}
+
+.overlayCard p{
+
+    font-size:22px;
+
+    opacity:.85;
+
+}
+
+
+/* =========================================================
+            DISNEY GLOW
+========================================================= */
+
+.glassCard::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-2px;
+
+    border-radius:inherit;
+
+    background:
+
+    linear-gradient(
+
+        120deg,
+
+        rgba(255,255,255,.18),
+
+        transparent,
+
+        rgba(255,255,255,.08)
+
+    );
+
+    z-index:-1;
+
+    filter:blur(18px);
+
+}
+
+
+/* =========================================================
+             BUTTON SHIMMER
+========================================================= */
+
+button{
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+button::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:-120%;
+
+    width:60%;
+
+    height:100%;
+
+    background:
+
+    linear-gradient(
+
+        90deg,
+
+        transparent,
+
+        rgba(255,255,255,.45),
+
+        transparent
+
+    );
+
+}
+
+button:hover::before{
+
+    animation:shine 1s;
+
+}
+
+@keyframes shine{
+
+    from{
+
+        left:-120%;
+
+    }
+
+    to{
+
+        left:160%;
+
+    }
+
+}
+
+
+/* =========================================================
+              SCREEN FADE
+========================================================= */
+
+.screen{
+
+    transition:
+
+    opacity 1.2s,
+
+    visibility 1.2s;
+
+}
+
+/* =========================================================
+                    MEMORY SLIDER
+========================================================= */
+
+#memory{
+
+    flex-direction:column;
+
+    background:rgba(0,0,0,.25);
+
+    backdrop-filter:blur(10px);
+
+}
+
+#memorySlider{
+
+    width:min(420px,90vw);
+
+    height:75vh;
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+.memorySlide{
+
+    position:absolute;
+
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:32px;
+
+    overflow:hidden;
+
+    background:rgba(255,255,255,.05);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:0 25px 80px rgba(0,0,0,.45);
+
+    animation:fadeSlide .6s ease;
+
+}
+
+.memorySlide img{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+}
+
+@keyframes fadeSlide{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.94);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+
+    }
+
+}
+
+#sliderDots{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-top:35px;
+
+}
+
+.dot{
+
+    width:12px;
+
+    height:12px;
+
+    border-radius:50%;
+
+    background:rgba(255,255,255,.25);
+
+    cursor:pointer;
+
+    transition:.35s;
+
+}
+
+.dot.active{
+
+    width:34px;
+
+    border-radius:100px;
+
+    background:#ff5fa2;
+
+}
+
+/* =========================================================
+                    GIFT PREVIEW
+========================================================= */
+
+.giftPreview{
+
+    flex-direction:column;
+
+    cursor:pointer;
+
+}
+
+.giftPreviewBox{
+
+    font-size:110px;
+
+    animation:giftBounce 2.5s infinite;
+
+}
+
+@keyframes giftBounce{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-14px);
+
+    }
+
+}
+
+/* =========================================================
+                    GIFT SCENE
+========================================================= */
+
+#giftContainer{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+#giftScene{
+
+    position:relative;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+#giftGlow{
+
+    width:320px;
+
+    height:320px;
+
+    position:absolute;
+
+    border-radius:50%;
+
+    background:radial-gradient(circle,#ff77bb55,transparent);
+
+    filter:blur(35px);
+
+}
+
+#giftBox3D{
+
+    width:220px;
+
+    height:220px;
+
+    position:relative;
+
+    cursor:pointer;
+
+    transition:1s;
+
+}
+
+#giftBody{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:220px;
+
+    height:160px;
+
+    background:linear-gradient(135deg,#ff7eb8,#ff4f87);
+
+    border-radius:18px;
+
+}
+
+#giftLid{
+
+    position:absolute;
+
+    top:0;
+
+    width:220px;
+
+    height:60px;
+
+    background:#ff95c6;
+
+    border-radius:18px;
+
+    transition:1s;
+
+    transform-origin:bottom;
+
+}
+
+.openGift #giftLid{
+
+    transform:
+
+    rotateX(130deg)
+
+    translateY(-40px);
+
+}
+
+#giftRibbonV{
+
+    position:absolute;
+
+    left:96px;
+
+    width:28px;
+
+    height:220px;
+
+    background:white;
+
+}
+
+#giftRibbonH{
+
+    position:absolute;
+
+    top:48px;
+
+    width:220px;
+
+    height:24px;
+
+    background:white;
+
+}
+
+#giftText{
+
+    margin-top:50px;
+
+    letter-spacing:4px;
+
+}
+
+/* =========================================================
+                    JAR
+========================================================= */
+
+#jarContainer{
+
+    width:100%;
+
+    height:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+#jarScene{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+#glassJar{
+
+    width:280px;
+
+    height:420px;
+
+    position:relative;
+
+}
+
+#jarBody{
+
+    width:100%;
+
+    height:360px;
+
+    position:absolute;
+
+    bottom:0;
+
+    border-radius:40px;
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(18px);
+
+    border:2px solid rgba(255,255,255,.35);
+
+    overflow:hidden;
+
+}
+
+#jarLid{
+
+    width:220px;
+
+    height:45px;
+
+    background:#ffd2a8;
+
+    border-radius:30px;
+
+    margin:auto;
+
+}
+
+#heartArea{
+
+    position:absolute;
+
+    inset:0;
+
+}
+
+.heart{
+
+    position:absolute;
+
+    cursor:pointer;
+
+    user-select:none;
+
+    transition:.4s;
+
+    animation:heartFloat 2.8s ease-in-out infinite;
+
+}
+
+.heart:hover{
+
+    transform:scale(1.25);
+
+}
+
+@keyframes heartFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
+
+#heartCounter{
+
+    margin-top:25px;
+
+    font-size:20px;
+
+    font-weight:600;
+
+}
+
+#jarTitle{
+
+    margin-top:35px;
+
+    margin-bottom:10px;
+
+}
+
+/* =========================================================
+                HEART MESSAGE
+========================================================= */
+
+.heartMessage{
+
+    position:fixed;
+
+    left:50%;
+
+    bottom:50px;
+
+    transform:translateX(-50%) translateY(40px);
+
+    padding:18px 34px;
+
+    border-radius:100px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(20px);
+
+    opacity:0;
+
+    transition:.45s;
+
+    z-index:9999;
+
+}
+
+.heartMessage.show{
+
+    opacity:1;
+
+    transform:translateX(-50%) translateY(0);
+
+}
+
+/* =========================================================
+                FINISH OVERLAY
+========================================================= */
+
+.finishOverlay{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:rgba(0,0,0,.75);
+
+    backdrop-filter:blur(12px);
+
+    opacity:0;
+
+    transition:.6s;
+
+    z-index:99999;
+
+}
+
+.finishOverlay.show{
+
+    opacity:1;
+
+}
+
+.finishOverlay h1{
+
+    font-size:64px;
+
+}
+
+.finishOverlay h2{
+
+    margin-top:18px;
+
+    font-weight:400;
+
+}
+
+/* =========================================================
+                FIREWORKS
+========================================================= */
+
+#fireworks{
+
+    background:#02020a;
+
+}
+
+#fireCanvas{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+}
+
+/* =========================================================
+                ENDING
+========================================================= */
+
+#ending{
+
+    background:
+    radial-gradient(circle at center,
+    rgba(255,110,180,.15),
+    transparent 70%);
+
+}
+
+.endingCard{
+
+    animation:endingFloat 5s ease-in-out infinite;
+
+}
+
+@keyframes endingFloat{
+
+    0%,100%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+}
+
+
+/* =========================================================
+                FINAL POLISH
+========================================================= */
+
+/* Aurora Background */
+
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:-30%;
+
+    background:
+    radial-gradient(circle at 20% 20%,rgba(255,170,210,.12),transparent 35%),
+    radial-gradient(circle at 80% 25%,rgba(120,180,255,.10),transparent 40%),
+    radial-gradient(circle at 50% 80%,rgba(255,255,255,.08),transparent 40%);
+
+    animation:auroraMove 25s ease-in-out infinite alternate;
+
+    pointer-events:none;
+
+    z-index:-3;
+
+}
+
+@keyframes auroraMove{
+
+    from{
+
+        transform:
+        rotate(0deg)
+        scale(1);
+
+    }
+
+    to{
+
+        transform:
+        rotate(8deg)
+        scale(1.15);
+
+    }
+
+}
+
+/* Soft vignette */
+
+body::after{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+    radial-gradient(circle,
+    transparent 45%,
+    rgba(0,0,0,.42));
+
+    pointer-events:none;
+
+    z-index:999;
+
+}
+
+/* Floating glow */
+
+.glow{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    filter:blur(80px);
+
+    opacity:.25;
+
+    animation:glowFloat 10s ease-in-out infinite;
+
+}
+
+@keyframes glowFloat{
+
+    0%,100%{
+
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+
+    50%{
+
+        transform:
+        translateY(-35px)
+        scale(1.15);
+
+    }
+
+}
+
+/* Gift Sparkles */
+
+.giftSparkle{
+
+    position:absolute;
+
+    width:8px;
+
+    height:8px;
+
+    border-radius:50%;
+
+    background:white;
+
+    box-shadow:
+    0 0 12px white,
+    0 0 25px white;
+
+    animation:sparkle 2s linear forwards;
+
+    pointer-events:none;
+
+}
+
+@keyframes sparkle{
+
+    from{
+
+        opacity:1;
+
+        transform:
+        translateY(0)
+        scale(1);
+
+    }
+
+    to{
+
+        opacity:0;
+
+        transform:
+        translateY(-90px)
+        scale(0);
+
+    }
+
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#101010;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#ff72b3;
+
+    border-radius:50px;
+
+}
+
+/* Inputs */
+
+input{
+
+    transition:.35s;
+
+}
+
+input:focus{
+
+    transform:scale(1.02);
+
+}
+
+/* Buttons */
+
+button{
+
+    transition:
+    transform .25s,
+    box-shadow .25s;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 18px 35px rgba(255,110,170,.35);
+
+}
+
+button:active{
+
+    transform:scale(.96);
+
+}
+
+/* Images */
+
+img{
+
+    -webkit-user-drag:none;
+
+    user-select:none;
+
+}
+
+/* Fire Canvas */
+
+canvas{
+
+    display:block;
+
+}
+
+/* Mobile */
+
+@media(max-width:900px){
+
+    h1{
+
+        font-size:34px;
+
+    }
+
+    h2{
+
+        font-size:22px;
+
+    }
+
+    p{
+
+        font-size:16px;
+
+    }
+
+    #giftBox3D{
+
+        transform:scale(.85);
+
+    }
+
+    #glassJar{
+
+        transform:scale(.85);
+
+    }
+
+    .overlayCard{
+
+        width:90%;
+
+        padding:35px;
+
+    }
+
+    .overlayCard h1{
+
+        font-size:34px;
+
+    }
+
+    .memorySlide{
+
+        border-radius:22px;
+
+    }
+
+}
+
+/* Performance */
+
+.photo,
+.memorySlide,
+.heart,
+button{
+
+    will-change:transform;
+
+}
+
+/* Smooth Everything */
+
+*{
+
+    scroll-behavior:smooth;
+
+}

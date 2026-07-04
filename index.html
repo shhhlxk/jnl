@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday ❤️</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- Music -->
+
+    <audio id="bgMusic"
+           loop>
+
+        <source src="assets/music/birthday.mp3"
+                type="audio/mp3">
+
+    </audio>
+
+    <!-- Background -->
+
+    <div id="background">
+
+        <div id="particles"></div>
+
+        <div id="stars"></div>
+
+        <div id="photoWall">
+
+    <div id="leftColumn" class="photoColumn columnUp"></div>
+
+    <div id="middleColumn" class="photoColumn columnDown"></div>
+
+    <div id="rightColumn" class="photoColumn columnUp"></div>
+
+</div>
+
+        <div id="vignette"></div>
+
+    </div>
+
+    <!-- ===================== -->
+
+    <!-- LANDING -->
+
+    <!-- ===================== -->
+
+    <section id="landing"
+             class="screen active">
+
+        <div class="glassCard">
+
+            <h1>
+
+                yerzhavi pillu ❤️
+
+            </h1>
+
+            <button id="startBtn">
+
+                Open Your Surprise
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ===================== -->
+
+    <!-- PASSWORD -->
+
+    <!-- ===================== -->
+
+    <section id="password"
+             class="screen">
+
+        <div class="glassCard">
+
+            <h2>
+
+                Enter Password
+
+            </h2>
+
+            <p>
+
+                Hint :
+
+                Today's Date
+
+                
+
+            </p>
+
+            <input
+
+                id="passwordInput"
+
+                type="text"
+
+                placeholder="01/01/20">
+
+            <button id="passwordBtn">
+
+                Continue
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ===================== -->
+
+    <!-- MEMORY -->
+
+    <!-- ===================== -->
+
+    <section id="memory"
+             class="screen">
+
+        <div id="memorySlider">
+
+        </div>
+
+        <div id="sliderDots">
+
+        </div>
+
+    </section>
+
+    <!-- ===================== -->
+
+    <!-- GIFT -->
+
+    <!-- ===================== -->
+
+    <section id="gift"
+             class="screen">
+
+        <div id="giftContainer">
+
+        </div>
+
+    </section>
+
+    <!-- ===================== -->
+
+    <!-- JAR -->
+
+    <!-- ===================== -->
+
+    <section id="jar"
+             class="screen">
+
+        <div id="jarContainer">
+
+        </div>
+
+    </section>
+
+    <!-- ===================== -->
+
+    <!-- FIREWORKS -->
+
+    <!-- ===================== -->
+
+    <section id="fireworks"
+             class="screen">
+
+        <canvas id="fireCanvas">
+
+        </canvas>
+
+    </section>
+
+    <!-- ===================== -->
+
+    <!-- END -->
+
+    <!-- ===================== -->
+
+    <section id="ending"
+             class="screen">
+
+        <div class="glassCard endingCard">
+
+            <h1>
+
+                Happy Birthday ❤️
+
+            </h1>
+
+            <p>
+
+                Thank you for filling my life
+
+                with so much happiness.
+
+            </p>
+
+            <p>
+
+                I hope this is just one
+
+                of many birthdays
+
+                we celebrate together.
+
+            </p>
+
+            <h2>
+
+                I Love You ❤️
+
+            </h2>
+
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
