@@ -7,16 +7,17 @@
    CONFIG
 ============================ */
 
-const PHOTO_COUNT = 10;
+
 const PASSWORD = "07/07/26";
 
 /* ============================
    PHOTO ARRAY
 ============================ */
+const LANDING_PHOTO_COUNT = 20;
 
 const photos = [];
 
-for (let i = 1; i <= PHOTO_COUNT; i++) {
+for (let i = 1; i <= LANDING_PHOTO_COUNT; i++) {
     photos.push(`assets/photos/${i}.jpg`);
 }
 
