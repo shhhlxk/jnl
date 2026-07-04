@@ -18,7 +18,7 @@ const LANDING_PHOTO_COUNT = 20;
 const photos = [];
 
 for (let i = 1; i <= LANDING_PHOTO_COUNT; i++) {
-    photos.push(`assets/photos/${i}.jpg`);
+    photos.push(`assets/photos/img${i}.jpg`);
 }
 
 /* ============================
