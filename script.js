@@ -306,7 +306,9 @@ function createMemorySlides(){
     memorySlider.innerHTML = "";
     sliderDots.innerHTML = "";
 
-    for(let i=0;i<PHOTO_COUNT;i++){
+    const MEMORY_PHOTO_COUNT = 30;
+
+    for(let i = 0; i < MEMORY_PHOTO_COUNT; i++){
 
         const slide = document.createElement("div");
 
@@ -314,7 +316,7 @@ function createMemorySlides(){
 
         const img = document.createElement("img");
 
-        img.src = photos[i];
+        img.src = `assets/photos/img${i + 21}.jpg`;
 
         img.loading = "lazy";
 
