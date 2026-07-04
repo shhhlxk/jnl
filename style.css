@@ -307,13 +307,13 @@ input:focus{
 
 .columnUp{
 
-    animation:moveUp 35s linear infinite;
+    animation:moveUp 10s linear infinite;
 
 }
 
 .columnDown{
 
-    animation:moveDown 35s linear infinite;
+    animation:moveDown 10s linear infinite;
 
 }
 
