@@ -1293,14 +1293,14 @@ function showOverlayMessage(title, subtitle, duration = 1800) {
 function passwordSuccessFlow(){
 
     showOverlayMessage(
-        "Good Girl ❤️",
+        "Good Girl Mwah ❤️",
         ""
     );
 
     setTimeout(()=>{
 
         showOverlayMessage(
-            "Here's a recap ❤️",
+            "recap dekho and slide krte rehna last m gift h ",
             ""
         );
 
