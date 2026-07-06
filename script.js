@@ -941,24 +941,22 @@ function openHeart(heart){
 /* ==========================
       HEART MESSAGE
 ========================== */
-
+let currentHeartMessage = 0;
 function showHeartMessage(){
 
-    const msg=document.createElement("div");
+    const msg = document.createElement("div");
 
-    msg.className="heartMessage";
+    msg.className = "heartMessage";
 
-    msg.innerHTML=
+    if(currentHeartMessage >= heartMessages.length){
 
-    heartMessages[
+        currentHeartMessage = heartMessages.length - 1;
 
-        Math.floor(
+    }
 
-            Math.random()*heartMessages.length
+    msg.innerHTML = heartMessages[currentHeartMessage];
 
-        )
-
-    ];
+    currentHeartMessage++;
 
     document.body.appendChild(msg);
 
@@ -981,7 +979,6 @@ function showHeartMessage(){
     },2400);
 
 }
-
 /* ==========================
       FINISH
 ========================== */
