@@ -1450,6 +1450,10 @@ button:hover::before{
                 ENDING
 ========================================================= */
 
+/* =========================================================
+                ENDING
+========================================================= */
+
 #ending{
 
     background:
@@ -1463,9 +1467,15 @@ button:hover::before{
 
     align-items:flex-start;
 
+    min-height:100vh;
+
     overflow-y:auto;
 
+    overflow-x:hidden;
+
     padding:40px 20px;
+
+    box-sizing:border-box;
 
 }
 
@@ -1481,9 +1491,41 @@ button:hover::before{
 
     border-radius:30px;
 
-    animation:endingFloat 5s ease-in-out infinite;
-
     box-sizing:border-box;
+
+    animation:none;
+
+}
+
+.endingCard h1{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+}
+
+.endingCard h2{
+
+    text-align:center;
+
+    margin-top:30px;
+
+}
+
+.endingCard p{
+
+    white-space:pre-line;
+
+    line-height:1.9;
+
+    text-align:left;
+
+    overflow-wrap:anywhere;
+
+    word-break:break-word;
+
+    margin:18px 0;
 
 }
 
@@ -1502,7 +1544,6 @@ button:hover::before{
     }
 
 }
-
 
 /* =========================================================
                 FINAL POLISH
@@ -1999,26 +2040,52 @@ button{
        ENDING
     ========================= */
 
+/* =========================
+        ENDING
+========================= */
+
 .endingCard{
 
-    width:92vw;
+    width:94vw;
 
-    max-width:92vw;
+    max-width:94vw;
 
-    padding:24px;
+    padding:22px;
 
     margin:20px auto;
 
 }
 
-    .endingCard h1{
+.endingCard h1{
 
-        font-size:2rem;
-    }
+    font-size:2rem;
 
-    .endingCard h2{
+    line-height:1.2;
 
-        font-size:1.5rem;
-    }
+}
+
+.endingCard h2{
+
+    font-size:1.45rem;
+
+}
+
+.endingCard p{
+
+    font-size:1rem;
+
+    line-height:1.8;
+
+    text-align:left;
+
+    white-space:pre-line;
+
+    overflow-wrap:anywhere;
+
+    word-break:break-word;
+
+}
+
+
 
 }
