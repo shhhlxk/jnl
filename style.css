@@ -1457,11 +1457,33 @@ button:hover::before{
     rgba(255,110,180,.15),
     transparent 70%);
 
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    overflow-y:auto;
+
+    padding:40px 20px;
+
 }
 
 .endingCard{
 
+    width:min(92vw,700px);
+
+    max-width:700px;
+
+    margin:40px auto;
+
+    padding:35px;
+
+    border-radius:30px;
+
     animation:endingFloat 5s ease-in-out infinite;
+
+    box-sizing:border-box;
 
 }
 
@@ -1977,12 +1999,17 @@ button{
        ENDING
     ========================= */
 
-    .endingCard{
+.endingCard{
 
-        width:92vw;
+    width:92vw;
 
-        padding:28px;
-    }
+    max-width:92vw;
+
+    padding:24px;
+
+    margin:20px auto;
+
+}
 
     .endingCard h1{
 
