@@ -764,8 +764,8 @@ const heartMessages = [
 
 "I'll always choose you "
 
-   "be with me till sky touches the sea cutu"
-   "i miss eating ur puh"
+"be with me till sky touches the sea cutu"
+"i miss eating ur puh"
 "Thank you for existing."
 "tbh ill never get tired of loving u and seeing u "
 "love those nain of yours"
