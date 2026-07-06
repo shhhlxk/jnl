@@ -762,35 +762,35 @@ const heartMessages = [
 
 "You're my peace ",
 
-"I'll always choose you "
+"I'll always choose you ",
 
-"be with me till sky touches the sea cutu"
-"i miss eating ur puh"
-"Thank you for existing."
-"tbh ill never get tired of loving u and seeing u "
-"love those nain of yours"
-"bhai i want to kissyoumc itne durwhy"
-"fuckyou btw"
-"I miss you more than I admit."
-"I'm lucky that I met you."
-"garam pani piya kro"
-"yawr teri kirkir sunne ka man krra"
-"shravani athvan yetey"
-"pillu mwah"
-"You're my comfort person"
-"You've become my favorite habit"
-"Every memory with you matters"
-"I still get excited when you text me."
-"You deserve to be loved and i want to keep doing it"
-"I love the little things about you and ur big tits"
-"btw happy bday once again"
-"js stay with me till end"
-"be my endgame"
-"I love you. More than words can explain."
-"i am always there for you "
-"I hope today feels as special as you are."
-"I'm happy happier happiest because of you."
-"shravani i hope u will like this"
+"be with me till sky touches the sea cutu",
+"i miss eating ur puh",
+"Thank you for existing.",
+"tbh ill never get tired of loving u and seeing u ",
+"love those nain of yours",
+"bhai i want to kissyoumc itne durwhy",
+"fuckyou btw",
+"I miss you more than I admit.",
+"I'm lucky that I met you.",
+"garam pani piya kro",
+"yawr teri kirkir sunne ka man krra",
+"shravani athvan yetey",
+"pillu mwah",
+"You're my comfort person",
+"You've become my favorite habit",
+"Every memory with you matters",
+"I still get excited when you text me.",
+"You deserve to be loved and i want to keep doing it",
+"I love the little things about you and ur big tits",
+"btw happy bday once again",
+"js stay with me till end",
+"be my endgame",
+"I love you. More than words can explain.",
+"i am always there for you ",
+"I hope today feels as special as you are.",
+"I'm happy happier happiest because of you.",
+"shravani i hope u will like this",
 "thanks for everything luv"
 
 
